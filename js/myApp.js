@@ -37,8 +37,14 @@ myApp.controller('ListaTrem', ['$scope', function($scope) {
             idade: $scope.pessoa.idade,
             sexo: $scope.pessoa.sexo
         });
-
+        
         console.log($scope.lista.length);
+        
+        //limpando campos
+        $scope.pessoa.nome = '';
+        $scope.pessoa.idade = '';
+        $scope.pessoa.sexo = '';
+        
     }
     
 }]);
