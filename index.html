@@ -10,8 +10,8 @@
          <p class="username">Bem vindo {{user.details.username}}</p>
          <p class="id">Id do User: {{user.details.id}}</p>
       </div>
-      <div>
-         <table id="tabelaPessoa" ng-controller="ListaTrem">
+      <div ng-controller="ListaTrem">
+         <table id="tabelaPessoa">
             <tr>
                <th>Nome</th>
                <th>Idade</th>
@@ -23,13 +23,16 @@
                <td>{{i.sexo}}</td>
             </tr>
          </table>
+          <br>
+          <form class="form-inline" name="formCadastro" >
+              <input type="text" name="Seará?" ng-model="pessoa.nome" placeholder="Digite o Nome">
+              <input type="text" ng-model="pessoa.idade" placeholder="Digite a Idade">
+              <input type="text" ng-model="pessoa.sexo" placeholder="Digite o Sexo">
+              <button ng-click="vai()">Adicionar Pessoa</button>
+          </form>          
+          
       </div>
-      <form ng-controller="ListaTrem" class="form-inline" name="formCadastro">
-          <input type="text" name="Seará?" ng-model="pessoa.nome">
-          <input type="text" ng-model="pessoa.idade">
-          <input type="text" ng-model="pessoa.sexo">
-          <button ng-click="vai()">Adicionar Pessoa</button>
-      </form>
+
       <!-- Por otimização, é aconselhável a utilização de script no final do HTML #ficaDica -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
       <script src="js/myApp.js"></script>
