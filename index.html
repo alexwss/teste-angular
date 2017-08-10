@@ -1,40 +1,37 @@
-<!DOCTYPE HTML>
 <html lang="pt-br" ng-app="myApp">
-   <head>
-      <meta charset="UTF-8">
-      <title>Teste</title>
-   </head>
-   <body>
-      <p>Teste</p>
-      <div ng-controller="UserContrl">
-         <p class="username">Bem vindo {{user.details.username}}</p>
-         <p class="id">Id do User: {{user.details.id}}</p>
-      </div>
-      <div ng-controller="ListaTrem">
-         <table id="tabelaPessoa">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+</head>
+<body>
+    <p>Teste</p>
+    <div ng-controller="UserContrl">
+        <p class="username">Bem vindo {{user.details.username}}</p>
+        <p class="id">Id do User: {{user.details.id}}</p>
+    </div>
+    <div ng-controller="ListaTrem">
+        <table id="tabelaPessoa">
             <tr>
-               <th>Nome</th>
-               <th>Idade</th>
-               <th>Sexo</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Sexo</th>
             </tr>
             <tr ng-repeat="i in lista">
-               <td>{{i.nome}}</td>
-               <td>{{i.idade}}</td>
-               <td>{{i.sexo}}</td>
+                <td>{{i.nome}}</td>
+                <td>{{i.idade}}</td>
+                <td>{{i.sexo}}</td>
             </tr>
-         </table>
-          <br>
-          <form class="form-inline" name="formCadastro" >
-              <input type="text" name="Seará?" ng-model="pessoa.nome" placeholder="Digite o Nome">
-              <input type="text" ng-model="pessoa.idade" placeholder="Digite a Idade">
-              <input type="text" ng-model="pessoa.sexo" placeholder="Digite o Sexo">
-              <button ng-click="vai()">Adicionar Pessoa</button>
-          </form>          
-          
-      </div>
-
-      <!-- Por otimização, é aconselhável a utilização de script no final do HTML #ficaDica -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-      <script src="js/myApp.js"></script>
-   </body>
+        </table>
+        <br>
+        <form class="form-inline" name="formCadastro">
+            <input type="text" name="Seará?" ng-model="pessoa.nome" placeholder="Digite o Nome">
+            <input type="text" ng-model="pessoa.idade" placeholder="Digite a Idade">
+            <input type="text" ng-model="pessoa.sexo" placeholder="Digite o Sexo">
+            <button ng-click="vai()">Adicionar Pessoa</button>
+        </form>
+    </div>
+    <!-- Por otimização, é aconselhável a utilização de script no final do HTML #ficaDica -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/myApp.js"></script>
+</body>
 </html>
