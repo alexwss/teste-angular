@@ -1,31 +1,29 @@
 <html ng-app="myApp">
-    <head>
-        <title>Teste</title>
-
-    </head>
-    <body>
-        <p>Teste</p>
-        <div ng-controller="UserContrl">
-            <p class="username">Bem vindo {{user.details.username}}</p>
-            <p class="id">Id do User:  {{user.details.id}}</p>
-        </div>      
-        <div ng-controller="ListaTrem">
-            <table>
-                <tr>
-                    <th>Nome</th>
-                    <th>Idade</th>
-                    <th>Sexo</th>
-                </tr>
-                <tr ng-repeat="i in lista" >
-                    <td>{{i.nome}}</td>
-                    <td>{{i.idade}}</td>
-                    <td>{{i.sexo}}</td>
-                </tr>
-            </table>
-        </div>
-        <!-- Por otimização, é aconselhável a utilização de script no final do HTML #ficaDica -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <script src="js/myApp.js"></script>
-        
-    </body>
+   <head>
+      <title>Teste</title>
+   </head>
+   <body>
+      <p>Teste</p>
+      <div ng-controller="UserContrl">
+         <p class="username">Bem vindo {{user.details.username}}</p>
+         <p class="id">Id do User: {{user.details.id}}</p>
+      </div>
+      <div ng-controller="ListaTrem">
+         <table>
+            <tr>
+               <th>Nome</th>
+               <th>Idade</th>
+               <th>Sexo</th>
+            </tr>
+            <tr ng-repeat="i in lista">
+               <td>{{i.nome}}</td>
+               <td>{{i.idade}}</td>
+               <td>{{i.sexo}}</td>
+            </tr>
+         </table>
+      </div>
+      <!-- Por otimização, é aconselhável a utilização de script no final do HTML #ficaDica -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <script src="js/myApp.js"></script>
+   </body>
 </html>
