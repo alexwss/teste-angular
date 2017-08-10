@@ -1,5 +1,7 @@
-<html ng-app="myApp">
+<!DOCTYPE HTML>
+<html lang="pt-br" ng-app="myApp">
    <head>
+      <meta charset="UTF-8">
       <title>Teste</title>
    </head>
    <body>
@@ -9,7 +11,7 @@
          <p class="id">Id do User: {{user.details.id}}</p>
       </div>
       <div>
-         <table ng-controller="ListaTrem">
+         <table id="tabelaPessoa" ng-controller="ListaTrem">
             <tr>
                <th>Nome</th>
                <th>Idade</th>
@@ -22,6 +24,12 @@
             </tr>
          </table>
       </div>
+      <form ng-controller="ListaTrem" class="form-inline" name="formCadastro">
+          <input type="text" name="Seará?" ng-model="pessoa.nome">
+          <input type="text" ng-model="pessoa.idade">
+          <input type="text" ng-model="pessoa.sexo">
+          <button ng-click="vai()">Adicionar Pessoa</button>
+      </form>
       <!-- Por otimização, é aconselhável a utilização de script no final do HTML #ficaDica -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
       <script src="js/myApp.js"></script>
